@@ -61,11 +61,11 @@ def add_tags(gen, metadata):
         add the scripts and/or styles to the article
     """
     if 'scripts' in metadata.keys():
-        script = '<script src="{0}/js/{1}"></script>'
+        script = '<script src="{0}{1}"></script>'
         metadata['scripts'] = format_resource(gen, metadata['scripts'], script)
 
     if 'styles' in metadata.keys():
-        style = '<link rel="stylesheet" href="{0}/css/{1}" type="text/css" />'
+        style = '<link rel="stylesheet" href="{0}{1}" type="text/css" />'
         metadata['styles'] = format_resource(gen, metadata['styles'], style)
 
     if 'd3' in metadata.keys():
